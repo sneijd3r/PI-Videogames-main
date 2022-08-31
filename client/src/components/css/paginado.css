@@ -1,0 +1,72 @@
+.paginado{
+    width: 1220px;
+    display: inline-block;
+    margin: auto;
+}
+.currentPage{
+    margin:auto;
+    width: 20px;
+    float:right; 
+    color: white;
+    background-color: rgba(94, 92, 90, 0.438);
+    border-radius: 8px;
+}
+.contenedorPaginado{
+    position: relative;
+    padding-top: 5px;
+    padding-top: 10px;
+    margin: auto;
+    bottom: 1px;
+}
+
+
+.abottom{
+    width: 32px;
+}
+
+/* .num{
+    float: left;
+	cursor:pointer;
+	width: 20px;
+    height: 22px;
+	font-weight:bold;
+	padding:5px 11px;	
+    background-color:rgb(63, 65, 64);
+    margin-right: 5px;
+    border-radius: 8px;
+} */
+.num:hover{
+    transform: scale(1.03);
+    background-color: rgb(99, 102, 100);
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5); */
+    color:black;
+}
+
+.button-31P {
+  background-color: #222;
+  border-radius: 5px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-right: 5px;
+  
+}
+
+.button-31P:hover,
+.button-31P:focus {
+  background-color: rgb(250, 236, 34);;
+  color:black;
+}

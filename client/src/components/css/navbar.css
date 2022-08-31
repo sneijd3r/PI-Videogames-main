@@ -1,0 +1,12 @@
+.navName{
+    font-size: large;
+    color: rgb(250, 236, 34);
+}
+input .optSearch{
+    width: 30px;
+}
+form .optSearch{
+width: 105px;
+height: 20px;
+margin-bottom: 10px;
+}
