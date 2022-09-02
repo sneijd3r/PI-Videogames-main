@@ -96,3 +96,9 @@ h4.tittle{
   .plaformsDetail{
     display: inline-flex;
   }
+
+  .plataformasImg{
+    filter: brightness(0) invert(1);
+    margin-right: 3px;
+  }
+ 

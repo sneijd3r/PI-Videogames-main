@@ -10,13 +10,12 @@ import './css/paginado.css'
         
         <div className="paginado">
             
+            
                 {pageNumbers.map(number => (
                     
                         <button class="button-31P" onClick={() => paginate(number)} href="#">{number}</button>
                         
-                    
-                ))}
-            
+                ))}          
         </div>
         
 

@@ -49,6 +49,7 @@
   box-sizing: border-box;
   color: #fff;
   display: inline-block;
+  cursor: pointer;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;

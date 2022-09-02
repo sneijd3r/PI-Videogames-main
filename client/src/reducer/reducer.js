@@ -72,6 +72,7 @@ function rootReducer(state = initialState, action){
                 ...state,
                 videogames: action.payload
             }
+
             
         case 'GET_GENRES' :
             return{
@@ -110,7 +111,8 @@ function rootReducer(state = initialState, action){
                 ...state,
                 videogames: sortRating
             }
-        case 'GENRE_FILTER' :
+
+            case 'GENRE_FILTER' :
             const filterGenre = [...state.allVideogames]
             const filter = []
             

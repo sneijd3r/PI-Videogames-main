@@ -3,7 +3,7 @@ import Card from "./Card";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
-import { getVideogames, genreFilter, getGenres, getDbGames, sort, sortRating } from "../actions/actions"
+import { getVideogames, genreFilter, getGenres, getDbGames, sort, sortRating} from "../actions/actions"
 import Paginado from "./Paginado"
 import NavBar from "./NavBar";
 import './css/home.css'
@@ -22,15 +22,16 @@ export default function Home() {
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     // indice del primer elemento de cada pagina
     const currentVideogames = allVideogames?.slice(indexOfFirstCard, indexOfLastCard);
-
+    
+    
     
 
 
 useEffect (() =>{   
-    setLoading(true)
-    dispatch(getVideogames())
+    
+    dispatch(getVideogames(setLoading))
     dispatch(getGenres())
-    setLoading(false)
+   
  
 },[])
 
@@ -53,11 +54,6 @@ function handleSorts(e){
     setCurrentPage(1)
 }
 
-function resetGenres(e){
-    e.preventDefault()
-    dispatch(getVideogames())
-    setCurrentPage(1)
-}
 
 function handleSortRating(e){
     e.preventDefault()
@@ -110,7 +106,7 @@ return(
 
             <h3 className="tittleHome">Genres</h3>
             <div className="genresFilter">
-                <button class="button-31" onClick={(e) => resetGenres(e)} value='all'>Clear</button>
+                {/* <button class="button-31"  onClick={(e) => resetGenres(e)}>Clear</button> */}
 
                 {allGenres.length > 0 ? allGenres?.map((genre) => {
                     return (
@@ -136,15 +132,20 @@ return(
             
         {currentVideogames && currentVideogames.map(games => <Link to={'/details/' + games.id}>
             <div className="card">
-                <Card  name={games.name} image={games.image} platforms={games.platforms.map(plat => plat + ' ')} loading={loading} />
+                <Card  name={games.name} image={games.image} platforms={games.platforms}  />
             </div>
         </Link>
 
         )}</div>
 
-        : 
+        : loading ? 
         <div className="contenedorLoading">
             <img  className="loading" src="https://i.pinimg.com/originals/2e/b8/d0/2eb8d009f410f30866b6a34a374af797.gif" alt="" />
+            </div>
+            :
+            <div className="eldepikachu">
+                <h3 className="Notfound">No games founded</h3>
+            <img  className="Notfound" src="https://giffiles.alphacoders.com/266/2669.gif" alt="" />
             </div>
          } 
 

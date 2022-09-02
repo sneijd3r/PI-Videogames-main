@@ -1,14 +1,18 @@
 import axios from 'axios'
 
-export function getVideogames(){
+export function getVideogames(setLoading){
     return async function(dispatch){
+        setLoading(true)
         const videogames = await axios.get('http://localhost:3001/videogames')
+        setLoading(false)
         return dispatch({
             type: 'GET_VIDEOGAMES',
             payload: videogames.data
         })
     }
 }
+
+
 
 export function getVideogamesById(id){
     return async function(dispatch){
@@ -20,14 +24,15 @@ export function getVideogamesById(id){
     }
 }
 
+
 export function postGame(payload){
     return async function(dispatch){
-    return axios.post('http://localhost:3001/videogames/', payload)
-    .then(post => dispatch({
-        type: 'POST_GAME',
-        payload : post.data
-    }))
-}
+        const post = axios.post('http://localhost:3001/videogames/', payload)
+        return dispatch({
+            type: 'POST_GAME',
+            payload : post.data
+        })
+    }
 }
 
 export function getGameByName(name){
@@ -39,6 +44,7 @@ export function getGameByName(name){
         })
     }
 }
+
 
 export function getGenres(){
     return async function(dispatch){

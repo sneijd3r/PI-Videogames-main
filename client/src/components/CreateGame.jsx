@@ -10,7 +10,7 @@ function validate(input){
     if (!input.name) errors.name = "Insert a name";
     if(input.name.length > 0) { 
         
-        if (!/^[a-zA-Z0-9]+$/.test(input.name)) { errors.name = 'Name cannot contain special characters' }
+        if (!/^[a-zA-Z\s]*$/.test(input.name)) { errors.name = 'Name cannot contain special characters' }
         if (input.name.length > 15 || input.name.length < 2) errors.name = 'Name must be between 2 and 15 characters';
     }
         

@@ -1,25 +1,27 @@
 import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getGameByName } from "../actions/actions";
+import { getGameByName, getGamesByGenre } from "../actions/actions";
 import './css/navbar.css'
 
 export default function NavBar(){
     const dispatch = useDispatch()
     const [name, setName] = useState("")
-
+    
 
 function handleImputChange(e){
     e.preventDefault()
     setName(e.target.value)
+    
 }
 
 function handleSumbit(e){
     e.preventDefault()
     if(name){
-    dispatch(getGameByName(name))
+       dispatch(getGameByName(name))
     }
     setName('')
+    
 }
 
 return(
