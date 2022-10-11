@@ -2,10 +2,6 @@
 
 # Individual Project - Henry Videogames
 
-<p align="right">
-  <img height="200" src="./videogame.png" />
-</p>
-
 ## Objetivos del Proyecto
 
 - Construir una App utlizando React, Redux, Node y Sequelize.
@@ -14,32 +10,6 @@
 - Aprender y practicar el workflow de GIT.
 - Usar y practicar testing.
 
-## Horarios y Fechas
-
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
-
-## Comenzando
-
- 1. Forkear el repositorio para tener una copia del mismo en sus cuentas
- 2. Clonar el repositorio en sus computadoras para comenzar a trabajar
-
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
-
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
-
-Actualmente las versiónes necesarias son:
-
-- __Node__: 12.18.3 o mayor
-- __NPM__: 6.14.16 o mayor
-
-Para verificar que versión tienen instalada:
-
-```bash
-node -v
-npm -v
-```
-
-__ACLARACIÓN:__ Las dependencias actuales se encuentran en las versiones que venimos trabajando durante el bootcamp.
 
 Versiones:
 
@@ -166,7 +136,6 @@ La relación entre ambas entidades debe ser de muchos a muchos ya que un videoju
 __IMPORTANTE__: Pensar como modelar los IDs de los videojuegos en la base de datos. Existen distintas formas correctas de hacerlo pero tener en cuenta que cuando hagamos click en algun videojuego, este puede provenir de la API o de la Base de Datos por lo que cuando muestre su detalle no debería haber ambigüedad en cual se debería mostrar. Por ejemplo si en la API el videojuego `Age of Empires II: Age of Kings` tiene id = 1 y en nuestra base de datos creamos un nuevo videojuego `Age of Henry` con id = 1, ver la forma de diferenciarlos cuando querramos acceder al detalle del mismo.
 
 ## Backend
-
 Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
 
 __IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
